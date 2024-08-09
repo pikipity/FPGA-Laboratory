@@ -1,0 +1,7 @@
+|half_adder
+in1 => Add0.IN1
+in2 => Add0.IN2
+sum << Add0.DB_MAX_OUTPUT_PORT_TYPE
+cout << Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
