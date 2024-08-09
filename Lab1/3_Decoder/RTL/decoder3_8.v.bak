@@ -1,0 +1,36 @@
+module decoder3_8
+(
+input wire in1 , //input 1
+input wire in2 , //input 2
+input wire in3 , //input 3
+
+output reg [7:0] out //输出信号out
+);
+
+ 
+ always@(*)
+ //Use "{}" to combine three 1bit data into one 3bit data
+ if({in1, in2, in3} == 3'b000)
+ out = 8'b0000_0001;
+ else if({in1, in2, in3} == 3'b001)
+ out = 8'b0000_0010;
+ else if({in1, in2, in3} == 3'b010)
+ out = 8'b0000_0100;
+ else if({in1, in2, in3} == 3'b011)
+ out = 8'b0000_1000;
+ else if({in1, in2, in3} == 3'b100)
+ out = 8'b0001_0000;
+ else if({in1, in2, in3} == 3'b101)
+ out = 8'b0010_0000;
+ else if({in1, in2, in3} == 3'b110)
+ out = 8'b0100_0000;
+ else if({in1, in2, in3} == 3'b111)
+ out = 8'b1000_0000;
+ else
+ //最后一个else对应的if中的条件只有一种情况，还可能产生以上另外的7种情况
+ //如果不加这个else综合器会把不符合该if中条件的上面另外7种情况都考虑进去
+ //会产生大量的冗余逻辑并产生latch（锁存器），所以在组合逻辑中最后一个if
+ //后一定要加上else，并任意指定一种确定的输出情况
+ out = 8'b0000_0001;
+
+ endmodule
