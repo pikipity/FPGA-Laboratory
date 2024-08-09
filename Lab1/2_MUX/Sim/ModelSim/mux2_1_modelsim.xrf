@@ -1,0 +1,10 @@
+vendor_name = ModelSim
+source_file = 1, C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab1/2_MUX/RTL/mux2_1.v
+source_file = 1, C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab1/2_MUX/Sim/tb_mux2_1.v
+source_file = 1, C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab1/2_MUX/Quartus_prj/db/mux2_1.cbx.xml
+design_name = mux2_1
+instance = comp, \out~output , out~output, mux2_1, 1
+instance = comp, \sel~input , sel~input, mux2_1, 1
+instance = comp, \in1~input , in1~input, mux2_1, 1
+instance = comp, \in2~input , in2~input, mux2_1, 1
+instance = comp, \out~0 , out~0, mux2_1, 1
