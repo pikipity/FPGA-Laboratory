@@ -17,7 +17,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
 
-// DATE "08/16/2024 17:16:12"
+// DATE "08/16/2024 17:57:28"
 
 // 
 // Device: Altera EP4CE10F17C8 Package FBGA256
@@ -61,8 +61,8 @@ wire \sum~output_o ;
 wire \cout~output_o ;
 wire \in1~input_o ;
 wire \in2~input_o ;
-wire \Add0~0_combout ;
-wire \Add0~1_combout ;
+wire \sum~0_combout ;
+wire \cout~0_combout ;
 
 
 hard_block auto_generated_inst(
@@ -72,7 +72,7 @@ hard_block auto_generated_inst(
 
 // Location: IOOBUF_X11_Y0_N9
 cycloneive_io_obuf \sum~output (
-	.i(\Add0~0_combout ),
+	.i(!\sum~0_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -85,7 +85,7 @@ defparam \sum~output .open_drain_output = "false";
 
 // Location: IOOBUF_X7_Y0_N9
 cycloneive_io_obuf \cout~output (
-	.i(\Add0~1_combout ),
+	.i(\cout~0_combout ),
 	.oe(vcc),
 	.seriesterminationcontrol(16'b0000000000000000),
 	.devoe(devoe),
@@ -117,37 +117,37 @@ defparam \in2~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: LCCOMB_X6_Y7_N0
-cycloneive_lcell_comb \Add0~0 (
+cycloneive_lcell_comb \sum~0 (
 // Equation(s):
-// \Add0~0_combout  = \in1~input_o  $ (\in2~input_o )
+// \sum~0_combout  = \in1~input_o  $ (\in2~input_o )
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(\in1~input_o ),
 	.datad(\in2~input_o ),
 	.cin(gnd),
-	.combout(\Add0~0_combout ),
+	.combout(\sum~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Add0~0 .lut_mask = 16'h0FF0;
-defparam \Add0~0 .sum_lutc_input = "datac";
+defparam \sum~0 .lut_mask = 16'h0FF0;
+defparam \sum~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 // Location: LCCOMB_X6_Y7_N26
-cycloneive_lcell_comb \Add0~1 (
+cycloneive_lcell_comb \cout~0 (
 // Equation(s):
-// \Add0~1_combout  = (\in1~input_o  & \in2~input_o )
+// \cout~0_combout  = (\in1~input_o ) # (\in2~input_o )
 
 	.dataa(gnd),
 	.datab(gnd),
 	.datac(\in1~input_o ),
 	.datad(\in2~input_o ),
 	.cin(gnd),
-	.combout(\Add0~1_combout ),
+	.combout(\cout~0_combout ),
 	.cout());
 // synopsys translate_off
-defparam \Add0~1 .lut_mask = 16'hF000;
-defparam \Add0~1 .sum_lutc_input = "datac";
+defparam \cout~0 .lut_mask = 16'hFFF0;
+defparam \cout~0 .sum_lutc_input = "datac";
 // synopsys translate_on
 
 assign sum = \sum~output_o ;

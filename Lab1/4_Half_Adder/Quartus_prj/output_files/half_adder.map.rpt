@@ -1,5 +1,5 @@
 Analysis & Synthesis report for half_adder
-Fri Aug 16 17:16:03 2024
+Fri Aug 16 17:57:20 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -43,7 +43,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Aug 16 17:16:03 2024          ;
+; Analysis & Synthesis Status        ; Successful - Fri Aug 16 17:57:20 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; half_adder                                     ;
 ; Top-level Entity Name              ; half_adder                                     ;
@@ -234,12 +234,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 4                           ;
-; cycloneiii_lcell_comb ; 2                           ;
-;     normal            ; 2                           ;
+; cycloneiii_lcell_comb ; 3                           ;
+;     normal            ; 3                           ;
+;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 2                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 1.00                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.80                        ;
 +-----------------------+-----------------------------+
 
 
@@ -258,7 +259,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Fri Aug 16 17:15:55 2024
+    Info: Processing started: Fri Aug 16 17:57:12 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off half_adder -c half_adder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -276,8 +277,8 @@ Info (21057): Implemented 6 device resources after synthesis - the final resourc
     Info (21061): Implemented 2 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4773 megabytes
-    Info: Processing ended: Fri Aug 16 17:16:03 2024
+    Info: Processing ended: Fri Aug 16 17:57:20 2024
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Total CPU time (on all processors): 00:00:17
 
 

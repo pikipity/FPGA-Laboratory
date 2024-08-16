@@ -1,7 +1,9 @@
 |half_adder
-in1 => Add0.IN1
-in2 => Add0.IN2
-sum <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-cout <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+in1 => sum.IN0
+in1 => cout.IN0
+in2 => sum.IN1
+in2 => cout.IN1
+sum << sum.DB_MAX_OUTPUT_PORT_TYPE
+cout << cout.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -7,7 +7,7 @@ output wire sum , //Addition of two inputs
 output wire cout //Carry-on after adding two inputs
 );
 
-
-assign {cout, sum} = in1 + in2;
+assign sum = in1 ~^ in2;
+assign cout = in1 | in2;
 
 endmodule
