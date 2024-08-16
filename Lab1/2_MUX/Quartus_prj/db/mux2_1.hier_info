@@ -1,0 +1,7 @@
+|mux2_1
+in1 => out.DATAB
+in2 => out.DATAA
+sel => out.OUTPUTSELECT
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
