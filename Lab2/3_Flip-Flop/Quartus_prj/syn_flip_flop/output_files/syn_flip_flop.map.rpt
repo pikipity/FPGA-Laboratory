@@ -1,5 +1,5 @@
-Analysis & Elaboration report for syn_flip_flop
-Mon Aug 19 12:08:58 2024
+Analysis & Synthesis report for syn_flip_flop
+Mon Aug 19 13:04:20 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -7,10 +7,16 @@ Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 ; Table of Contents ;
 ---------------------
   1. Legal Notice
-  2. Analysis & Elaboration Summary
-  3. Parallel Compilation
-  4. Analysis & Elaboration Settings
-  5. Analysis & Elaboration Messages
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -35,43 +41,27 @@ https://fpgasoftware.intel.com/eula.
 
 
 +-------------------------------------------------------------------------------------+
-; Analysis & Elaboration Summary                                                      ;
+; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Mon Aug 19 12:08:58 2024          ;
+; Analysis & Synthesis Status        ; Successful - Mon Aug 19 13:04:20 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; syn_flip_flop                                  ;
 ; Top-level Entity Name              ; syn_flip_flop                                  ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; N/A until Partition Merge                      ;
-;     Total combinational functions  ; N/A until Partition Merge                      ;
-;     Dedicated logic registers      ; N/A until Partition Merge                      ;
-; Total registers                    ; N/A until Partition Merge                      ;
-; Total pins                         ; N/A until Partition Merge                      ;
-; Total virtual pins                 ; N/A until Partition Merge                      ;
-; Total memory bits                  ; N/A until Partition Merge                      ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
-; Total PLLs                         ; N/A until Partition Merge                      ;
+; Total logic elements               ; 1                                              ;
+;     Total combinational functions  ; 1                                              ;
+;     Dedicated logic registers      ; 1                                              ;
+; Total registers                    ; 1                                              ;
+; Total pins                         ; 4                                              ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
 +------------------------------------+------------------------------------------------+
 
 
-+------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
-;                            ;             ;
-; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-+----------------------------+-------------+
-
-
 +------------------------------------------------------------------------------------------------------------+
-; Analysis & Elaboration Settings                                                                            ;
+; Analysis & Synthesis Settings                                                                              ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
@@ -156,23 +146,140 @@ https://fpgasoftware.intel.com/eula.
 +------------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------+
-; Analysis & Elaboration Messages ;
-+---------------------------------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
+; ../../RTL/syn_flip_flop.v        ; yes             ; User Verilog HDL File  ; C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab2/3_Flip-Flop/RTL/syn_flip_flop.v ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimated Total logic elements              ; 1            ;
+;                                             ;              ;
+; Total combinational functions               ; 1            ;
+; Logic element usage by number of LUT inputs ;              ;
+;     -- 4 input functions                    ; 0            ;
+;     -- 3 input functions                    ; 0            ;
+;     -- <=2 input functions                  ; 1            ;
+;                                             ;              ;
+; Logic elements by mode                      ;              ;
+;     -- normal mode                          ; 1            ;
+;     -- arithmetic mode                      ; 0            ;
+;                                             ;              ;
+; Total registers                             ; 1            ;
+;     -- Dedicated logic registers            ; 1            ;
+;     -- I/O registers                        ; 0            ;
+;                                             ;              ;
+; I/O pins                                    ; 4            ;
+;                                             ;              ;
+; Embedded Multiplier 9-bit elements          ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; led_out~reg0 ;
+; Maximum fan-out                             ; 1            ;
+; Total fan-out                               ; 9            ;
+; Average fan-out                             ; 0.90         ;
++---------------------------------------------+--------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                        ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
+; |syn_flip_flop             ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 4    ; 0            ; |syn_flip_flop      ; syn_flip_flop ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 4                           ;
+; cycloneiii_ff         ; 1                           ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 1                           ;
+;     normal            ; 1                           ;
+;         2 data inputs ; 1                           ;
+;                       ;                             ;
+; Max LUT depth         ; 1.00                        ;
+; Average LUT depth     ; 0.60                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Elaboration
+Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
-    Info: Processing started: Mon Aug 19 12:08:51 2024
-Info: Command: quartus_map --read_settings_files=on --write_settings_files=off syn_flip_flop -c syn_flip_flop --analysis_and_elaboration
+    Info: Processing started: Mon Aug 19 13:04:12 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off syn_flip_flop -c syn_flip_flop
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file /users/wangz/documents/github/fpga-laboratory/lab2/3_flip-flop/rtl/syn_flip_flop.v
     Info (12023): Found entity 1: syn_flip_flop File: C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab2/3_Flip-Flop/RTL/syn_flip_flop.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file /users/wangz/documents/github/fpga-laboratory/lab2/3_flip-flop/sim/tb_syn_flip_flop.v
+    Info (12023): Found entity 1: tb_syn_flip_flop File: C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab2/3_Flip-Flop/Sim/tb_syn_flip_flop.v Line: 2
 Info (12127): Elaborating entity "syn_flip_flop" for the top level hierarchy
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4707 megabytes
-    Info: Processing ended: Mon Aug 19 12:08:58 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:17
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 5 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 1 output pins
+    Info (21061): Implemented 1 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4776 megabytes
+    Info: Processing ended: Mon Aug 19 13:04:20 2024
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:18
 
 

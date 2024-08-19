@@ -1,0 +1,189 @@
+// Copyright (C) 2024  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition"
+
+// DATE "08/19/2024 13:04:30"
+
+// 
+// Device: Altera EP4CE10F17C8 Package FBGA256
+// 
+
+// 
+// This Verilog file should be used for Questa Intel FPGA (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module syn_flip_flop (
+	sys_clk,
+	sys_rst_n,
+	key_in,
+	led_out);
+input 	sys_clk;
+input 	sys_rst_n;
+input 	key_in;
+output 	led_out;
+
+// Design Ports Information
+// led_out	=>  Location: PIN_L7,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// sys_rst_n	=>  Location: PIN_M15,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// key_in	=>  Location: PIN_M2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// sys_clk	=>  Location: PIN_E1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \led_out~output_o ;
+wire \sys_clk~input_o ;
+wire \sys_rst_n~input_o ;
+wire \key_in~input_o ;
+wire \led_out~0_combout ;
+wire \led_out~reg0_q ;
+
+
+hard_block auto_generated_inst(
+	.devpor(devpor),
+	.devclrn(devclrn),
+	.devoe(devoe));
+
+// Location: IOOBUF_X11_Y0_N9
+cycloneive_io_obuf \led_out~output (
+	.i(\led_out~reg0_q ),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\led_out~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \led_out~output .bus_hold = "false";
+defparam \led_out~output .open_drain_output = "false";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y11_N8
+cycloneive_io_ibuf \sys_clk~input (
+	.i(sys_clk),
+	.ibar(gnd),
+	.o(\sys_clk~input_o ));
+// synopsys translate_off
+defparam \sys_clk~input .bus_hold = "false";
+defparam \sys_clk~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X34_Y12_N15
+cycloneive_io_ibuf \sys_rst_n~input (
+	.i(sys_rst_n),
+	.ibar(gnd),
+	.o(\sys_rst_n~input_o ));
+// synopsys translate_off
+defparam \sys_rst_n~input .bus_hold = "false";
+defparam \sys_rst_n~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X0_Y11_N15
+cycloneive_io_ibuf \key_in~input (
+	.i(key_in),
+	.ibar(gnd),
+	.o(\key_in~input_o ));
+// synopsys translate_off
+defparam \key_in~input .bus_hold = "false";
+defparam \key_in~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: LCCOMB_X1_Y9_N16
+cycloneive_lcell_comb \led_out~0 (
+// Equation(s):
+// \led_out~0_combout  = (\sys_rst_n~input_o  & \key_in~input_o )
+
+	.dataa(\sys_rst_n~input_o ),
+	.datab(gnd),
+	.datac(\key_in~input_o ),
+	.datad(gnd),
+	.cin(gnd),
+	.combout(\led_out~0_combout ),
+	.cout());
+// synopsys translate_off
+defparam \led_out~0 .lut_mask = 16'hA0A0;
+defparam \led_out~0 .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: FF_X1_Y9_N17
+dffeas \led_out~reg0 (
+	.clk(\sys_clk~input_o ),
+	.d(\led_out~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\led_out~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \led_out~reg0 .is_wysiwyg = "true";
+defparam \led_out~reg0 .power_up = "low";
+// synopsys translate_on
+
+assign led_out = \led_out~output_o ;
+
+endmodule
+
+module hard_block (
+
+	devpor,
+	devclrn,
+	devoe);
+
+// Design Ports Information
+// ~ALTERA_ASDO_DATA1~	=>  Location: PIN_C1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_FLASH_nCE_nCSO~	=>  Location: PIN_D2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DCLK~	=>  Location: PIN_H1,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_DATA0~	=>  Location: PIN_H2,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// ~ALTERA_nCEO~	=>  Location: PIN_F16,	 I/O Standard: 2.5 V,	 Current Strength: 8mA
+
+input 	devpor;
+input 	devclrn;
+input 	devoe;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+wire \~ALTERA_ASDO_DATA1~~padout ;
+wire \~ALTERA_FLASH_nCE_nCSO~~padout ;
+wire \~ALTERA_DATA0~~padout ;
+wire \~ALTERA_ASDO_DATA1~~ibuf_o ;
+wire \~ALTERA_FLASH_nCE_nCSO~~ibuf_o ;
+wire \~ALTERA_DATA0~~ibuf_o ;
+
+
+endmodule
