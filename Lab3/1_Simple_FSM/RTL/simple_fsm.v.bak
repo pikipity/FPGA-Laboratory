@@ -1,0 +1,12 @@
+module simple_fsm
+(
+ input wire sys_clk, // System clock: 50M Hz
+ input wire sys_rst_n, // Reset button
+ input wire coin, // Input money: Only can be 0 or 1
+ 
+ output reg cola // Output cola: 0 means taht there is no cola; 1 means that there is cola 
+);
+
+
+
+endmodule

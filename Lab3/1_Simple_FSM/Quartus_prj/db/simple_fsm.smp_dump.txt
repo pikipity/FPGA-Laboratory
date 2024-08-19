@@ -1,0 +1,6 @@
+
+State Machine - |simple_fsm|st_cur
+Name st_cur.TWO st_cur.ONE st_cur.IDLE 
+st_cur.IDLE 0 0 0 
+st_cur.ONE 0 1 1 
+st_cur.TWO 1 0 1 
