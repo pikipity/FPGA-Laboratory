@@ -1,5 +1,5 @@
 Flow report for half_adder
-Fri Aug 16 17:57:28 2024
+Mon Aug 19 08:42:15 2024
 Quartus Prime Version 23.1std.1 Build 993 05/14/2024 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Fri Aug 16 17:57:28 2024          ;
+; Flow Status                        ; Successful - Mon Aug 19 08:42:15 2024          ;
 ; Quartus Prime Version              ; 23.1std.1 Build 993 05/14/2024 SC Lite Edition ;
 ; Revision Name                      ; half_adder                                     ;
 ; Top-level Entity Name              ; half_adder                                     ;
@@ -65,7 +65,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 08/16/2024 17:57:12 ;
+; Start date & time ; 08/19/2024 08:41:59 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; half_adder          ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 186416556927.172380223207436           ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 186416556927.172402811915600           ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; tb_half_adder                     ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
@@ -112,12 +112,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4773 MB             ; 00:00:17                           ;
-; Fitter               ; 00:00:02     ; 1.0                     ; 6091 MB             ; 00:00:03                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4773 MB             ; 00:00:18                           ;
+; Fitter               ; 00:00:02     ; 1.0                     ; 6107 MB             ; 00:00:03                           ;
 ; Assembler            ; 00:00:01     ; 1.0                     ; 4683 MB             ; 00:00:01                           ;
 ; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 4820 MB             ; 00:00:01                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4629 MB             ; 00:00:00                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:22                           ;
+; Total                ; 00:00:13     ; --                      ; --                  ; 00:00:23                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

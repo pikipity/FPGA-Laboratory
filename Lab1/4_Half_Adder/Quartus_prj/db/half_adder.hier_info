@@ -3,7 +3,7 @@ in1 => sum.IN0
 in1 => cout.IN0
 in2 => sum.IN1
 in2 => cout.IN1
-sum << sum.DB_MAX_OUTPUT_PORT_TYPE
-cout << cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
