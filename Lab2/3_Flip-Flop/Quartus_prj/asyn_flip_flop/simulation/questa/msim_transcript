@@ -1,0 +1,86 @@
+# Reading pref.tcl
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 win64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# do asyn_flip_flop_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Questa Intel Starter FPGA Edition-64 vmap 2023.3 Lib Mapping Utility 2023.07 Jul 17 2023
+# vmap work rtl_work 
+# Copying c:/intelfpga_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab2/3_Flip-Flop/RTL {C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab2/3_Flip-Flop/RTL/asyn_flip_flop.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:48:56 on Aug 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab2/3_Flip-Flop/RTL" C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab2/3_Flip-Flop/RTL/asyn_flip_flop.v 
+# -- Compiling module asyn_flip_flop
+# 
+# Top level modules:
+# 	asyn_flip_flop
+# End time: 12:48:56 on Aug 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab2/3_Flip-Flop/Quartus_prj/asyn_flip_flop/../../Sim {C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab2/3_Flip-Flop/Quartus_prj/asyn_flip_flop/../../Sim/tb_asyn_flip_flop.v}
+# Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 12:48:56 on Aug 19,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab2/3_Flip-Flop/Quartus_prj/asyn_flip_flop/../../Sim" C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab2/3_Flip-Flop/Quartus_prj/asyn_flip_flop/../../Sim/tb_asyn_flip_flop.v 
+# -- Compiling module tb_asyn_flip_flop
+# 
+# Top level modules:
+# 	tb_asyn_flip_flop
+# End time: 12:48:56 on Aug 19,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_asyn_flip_flop
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_asyn_flip_flop 
+# Start time: 12:48:56 on Aug 19,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading work.tb_asyn_flip_flop(fast)
+# Loading work.asyn_flip_flop(fast)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 500 ns
+# @time    0ns: key_in=0 led_out=0
+# @time   40ns: key_in=1 led_out=0
+# @time   60ns: key_in=1 led_out=1
+# @time  160ns: key_in=0 led_out=1
+# @time  180ns: key_in=1 led_out=0
+# @time  200ns: key_in=1 led_out=1
+# @time  220ns: key_in=0 led_out=1
+# @time  230ns: key_in=0 led_out=0
+# @time  240ns: key_in=1 led_out=0
+# @time  280ns: key_in=0 led_out=1
+# @time  300ns: key_in=1 led_out=0
+# @time  320ns: key_in=0 led_out=1
+# @time  340ns: key_in=1 led_out=0
+# @time  360ns: key_in=0 led_out=1
+# @time  380ns: key_in=1 led_out=0
+# @time  400ns: key_in=1 led_out=1
+# @time  420ns: key_in=0 led_out=1
+# @time  440ns: key_in=1 led_out=0
+# @time  460ns: key_in=0 led_out=1
+# @time  480ns: key_in=0 led_out=0
+# Unrecognized paper size (Letter), using Custom
+# End time: 12:59:08 on Aug 19,2024, Elapsed time: 0:10:12
+# Errors: 0, Warnings: 1

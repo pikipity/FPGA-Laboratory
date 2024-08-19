@@ -1,0 +1,31 @@
+module flip_flop
+(
+input wire sys_clk , //系统时钟50Mh，后面我们都是设计的时序电路
+//所以一定要有时钟，时序电路中几乎所有的信
+//号都是伴随着时钟的沿（上升沿或下降沿，习
+//惯上用上升沿）进行工作的
+
+input wire sys_rst_n, //全局复位，复位信号的主要作用是在系统出现
+//问题是能够回到初始状态，或一些信号的初始
+ //化时需要进行复位
+
+ input wire key_in , //输入按键
+
+ output reg led_out //输出控制led灯
+ );
+
+ //led_out:led灯输出的结果为key_in按键的输入值
+ always@(posedge sys_clk) //当always块中的敏感列表为检测到sys_clk上升沿时
+ //执行下面的语句
+
+ if(sys_rst_n == 1'b0) //sys_rst_n为低电平时复位，但是这个复位有个大前
+ //提，那就是当sys_clk的上升沿到来时，如果检测到
+ //sys_rst_n为低电平则复位有效
+
+ led_out <= 1'b0; //复位的时候一定要给寄存器变量赋一个初值，一般情
+ //况下赋值为0（特殊情况除外），在描述时序电路时
+ //赋值符号一定要使用“<=”
+ else
+ led_out <= key_in;
+
+ endmodule

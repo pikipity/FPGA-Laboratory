@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Aug 19 12:46:10 2024
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : asyn_flip_flop
+Top-level Entity Name : asyn_flip_flop
+Family : Cyclone IV E
+Total logic elements : 1
+    Total combinational functions : 0
+    Dedicated logic registers : 1
+Total registers : 1
+Total pins : 4
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
