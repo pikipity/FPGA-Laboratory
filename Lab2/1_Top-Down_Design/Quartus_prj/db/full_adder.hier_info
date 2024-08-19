@@ -1,0 +1,22 @@
+|full_adder
+in1 => in1.IN1
+in2 => in2.IN1
+cin => cin.IN1
+sum << half_adder:half_adder_inst1.sum
+cout << cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder|half_adder:half_adder_inst0
+in1 => Add0.IN1
+in2 => Add0.IN2
+sum <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|full_adder|half_adder:half_adder_inst1
+in1 => Add0.IN1
+in2 => Add0.IN2
+sum <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+cout <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+
+

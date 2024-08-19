@@ -1,13 +1,12 @@
 module half_adder
 (
-input wire in1 , //first input
-input wire in2 , //second input
+input wire in1,
+input wire in2,
 
-output wire sum , //Addition of two inputs 
-output wire cout //Carry-on after adding two inputs
+output wire sum,
+output wire cout
 );
 
-assign sum = in1 ~^ in2;
-assign cout = in1 | in2;
+assign {cout, sum} = in1 + in2;
 
 endmodule
