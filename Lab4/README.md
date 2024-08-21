@@ -8,4 +8,4 @@ Create and test PLL IP core in Quartus.
 
 ## 4-2. Simple VGA display
 
-Write a VGA driver and use the FPGA development board to drive the VGA display to display ten-color equal-width color bars. The VGA display mode is 640x480@60. The expected experimental result is the following figure.
+Write a VGA driver and use the FPGA development board to drive the VGA display to display ten-color equal-width color bars. The VGA display mode is 640x480@60. 
