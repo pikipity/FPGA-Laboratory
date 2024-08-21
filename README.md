@@ -21,3 +21,5 @@ In this course, the example experiments include
 + Lab 5:
   + 5-1. RAM IP Core
   + 5-2. Key Debounce
+
+Note: Code that students are required to implement by themselves is not included in this repository.
