@@ -22,4 +22,4 @@ In this course, the example experiments include
   + 5-1. RAM IP Core
   + 5-2. Key Debounce
 
-Note: Code that students are required to implement by themselves is not included in this repository.
+Note: Codes that students are required to implement by themselves are not included in this repository.
