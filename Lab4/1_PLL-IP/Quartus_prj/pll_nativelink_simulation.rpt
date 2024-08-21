@@ -18,5 +18,6 @@ Sim dir               :  simulation\questa
 
 Info: Starting NativeLink simulation with Questa Intel FPGA software
 Sourced NativeLink script c:/intelfpga_lite/23.1std/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File pll_run_msim_rtl_verilog.do already exists - backing up current file as pll_run_msim_rtl_verilog.do.bak
 Info: Spawning Questa Intel FPGA Simulation software 
 Info: NativeLink simulation flow was successful

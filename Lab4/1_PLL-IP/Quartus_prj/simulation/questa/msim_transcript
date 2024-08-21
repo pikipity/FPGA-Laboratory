@@ -26,49 +26,49 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/Quartus_prj/ipcore_dir {C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/Quartus_prj/ipcore_dir/pll_ip.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 09:26:08 on Aug 20,2024
+# Start time: 19:07:43 on Aug 20,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/Quartus_prj/ipcore_dir" C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/Quartus_prj/ipcore_dir/pll_ip.v 
 # -- Compiling module pll_ip
 # 
 # Top level modules:
 # 	pll_ip
-# End time: 09:26:08 on Aug 20,2024, Elapsed time: 0:00:00
+# End time: 19:07:43 on Aug 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/RTL {C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/RTL/pll.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 09:26:08 on Aug 20,2024
+# Start time: 19:07:43 on Aug 20,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/RTL" C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/RTL/pll.v 
 # -- Compiling module pll
 # 
 # Top level modules:
 # 	pll
-# End time: 09:26:08 on Aug 20,2024, Elapsed time: 0:00:00
+# End time: 19:07:43 on Aug 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/Quartus_prj/db {C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/Quartus_prj/db/pll_ip_altpll.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 09:26:08 on Aug 20,2024
+# Start time: 19:07:43 on Aug 20,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/Quartus_prj/db" C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/Quartus_prj/db/pll_ip_altpll.v 
 # -- Compiling module pll_ip_altpll
 # 
 # Top level modules:
 # 	pll_ip_altpll
-# End time: 09:26:08 on Aug 20,2024, Elapsed time: 0:00:00
+# End time: 19:07:43 on Aug 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/Quartus_prj/../Sim {C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/Quartus_prj/../Sim/tb_pll.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 09:26:08 on Aug 20,2024
+# Start time: 19:07:43 on Aug 20,2024
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/Quartus_prj/../Sim" C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/Quartus_prj/../Sim/tb_pll.v 
 # -- Compiling module tb_pll
 # 
 # Top level modules:
 # 	tb_pll
-# End time: 09:26:08 on Aug 20,2024, Elapsed time: 0:00:00
+# End time: 19:07:44 on Aug 20,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_pll
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" tb_pll 
-# Start time: 09:26:08 on Aug 20,2024
+# Start time: 19:07:44 on Aug 20,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
@@ -91,5 +91,5 @@
 # run 500 ns
 #  Note : Cyclone IV E PLL locked to incoming clock
 # Time: 60000  Instance: tb_pll.pll_inst.pll_ip_inst.altpll_component.cycloneiii_pll.pll3
-# End time: 09:29:32 on Aug 20,2024, Elapsed time: 0:03:24
+# End time: 19:09:11 on Aug 20,2024, Elapsed time: 0:01:27
 # Errors: 0, Warnings: 1

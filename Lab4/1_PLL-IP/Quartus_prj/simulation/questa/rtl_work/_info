@@ -12,10 +12,10 @@ Z0 !s99 nomlopt
 cModel Technology
 Z1 dC:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/Quartus_prj/simulation/questa
 T_opt
-!s110 1724117170
-V3e`:D<Oi9Qn`_U3A_^^FZ0
+!s110 1724152065
+V6GGkP3bdjVJUcZgaZEkeZ2
 04 6 4 work tb_pll fast 0
-=1-002b674aeb7f-66c3f0b1-287-5f0
+=1-002b674aeb7f-66c47900-397-4a0
 R0
 !s12b OEM100
 !s124 OEM10U3 
@@ -25,7 +25,7 @@ n@_opt
 OL;O;2023.3;77
 vpll
 2C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/RTL/pll.v
-Z3 !s110 1724117168
+Z3 !s110 1724152063
 !i10b 1
 !s100 aLFcZT=M87NLB2^n9SGX50
 I21cnR5>ERlIl8Q2P4;<JD2
@@ -40,7 +40,7 @@ Z5 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z6 !s108 1724117168.000000
+Z6 !s108 1724152063.000000
 !s107 C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/RTL/pll.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/RTL|C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/RTL/pll.v|
 !i113 0
@@ -97,7 +97,7 @@ R7
 R2
 vtb_pll
 2C:/Users/wangz/Documents/GitHub/FPGA-Laboratory/Lab4/1_PLL-IP/Quartus_prj/../Sim/tb_pll.v
-R3
+!s110 1724152064
 !i10b 1
 !s100 LIz9?@U2T>M>U[jRj@LYX0
 I1TWKL[=^M`HDJPD]GHA2g2

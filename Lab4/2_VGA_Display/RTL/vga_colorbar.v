@@ -1,10 +1,10 @@
 module vga_colorbar(
-input wire sys_clk , //输入工作时钟,频率50MHz
-input wire sys_rst_n , //输入复位信号,低电平有效
+input wire sys_clk , //System Clock, 50MHz
+input wire sys_rst_n , //Reset signal. Low level is effective
 
-output wire hsync , //输出行同步信号
-output wire vsync , //输出场同步信号
-output wire [15:0] rgb //输出像素信息
+output wire hsync , //Line sync signal
+output wire vsync , //Field sync signal
+output wire [15:0] rgb //RGB565 color data
 
 );
 
@@ -13,14 +13,15 @@ output wire [15:0] rgb //输出像素信息
  ////
 
  //wire define
- wire vga_clk ; //VGA工作时钟,频率25MHz
- wire locked ; //PLL locked信号
- wire rst_n ; //VGA模块复位信号
- wire [9:0] pix_x ; //VGA有效显示区域X轴坐标
- wire [9:0] pix_y ; //VGA有效显示区域Y轴坐标
- wire [15:0] pix_data; //VGA像素点色彩信息
+ wire vga_clk ; //VGA working clock, 25MHz
+ wire locked ; //PLL locked signal
+ wire rst_n ; //VGA reset signal
+ wire [9:0] pix_x ; //x coordinate of current pixel
+ wire [9:0] pix_y ; //y coordinate of current pixel
+ wire [15:0] pix_data; //color information
 
- //rst_n:VGA模块复位信号
+ //VGA reset signal.
+ // When the system reset signal and the PLL locked signal are both in high level, the system works. 
  assign rst_n = (sys_rst_n & locked);
 
  ////
@@ -30,36 +31,36 @@ output wire [15:0] rgb //输出像素信息
  //------------- clk_gen_inst -------------
  clk_gen clk_gen_inst
  (
- .areset (~sys_rst_n ), //输入复位信号,高电平有效,1bit
- .inclk0 (sys_clk ), //输入50MHz晶振时钟,1bit
+ .areset (~sys_rst_n ), //Reset signal of PLL
+ .inclk0 (sys_clk ), //Input clock of PLL, 50MHz
 
- .c0 (vga_clk ), //输出VGA工作时钟,频率25MHz,1bit
- .locked (locked ) //输出pll locked信号,1bit
+ .c0 (vga_clk ), //Output clock signal of PLL, 25MHz
+ .locked (locked ) //PLL locked signal
  );
 
  //------------- vga_ctrl_inst -------------
  vga_ctrl vga_ctrl_inst
  (
- .vga_clk (vga_clk ), //输入工作时钟,频率25MHz,1bit
- .sys_rst_n (rst_n ), //输入复位信号,低电平有效,1bit
- .pix_data (pix_data ), //输入像素点色彩信息,16bit
+ .vga_clk (vga_clk ), //VGA working clock, 25MHz
+ .sys_rst_n (rst_n ), //Reset signal. Low level is effective
+ .pix_data (pix_data ), //color information
 
- .pix_x (pix_x ), //输出VGA有效显示区域像素点X轴坐标,10bit
- .pix_y (pix_y ), //输出VGA有效显示区域像素点Y轴坐标,10bit
- .hsync (hsync ), //输出行同步信号,1bit
- .vsync (vsync ), //输出场同步信号,1bit
- .rgb (rgb ) //输出像素点色彩信息,16bit
+ .pix_x (pix_x ), //x coordinate of current pixel
+ .pix_y (pix_y ), //y coordinate of current pixel
+ .hsync (hsync ), //Line sync signal
+ .vsync (vsync ), //Field sync signal
+ .rgb (rgb ) //RGB565 color data
  );
 
  //------------- vga_pic_inst -------------
  vga_pic vga_pic_inst
  (
- .vga_clk (vga_clk ), //输入工作时钟,频率25MHz,1bit
- .sys_rst_n (rst_n ), //输入复位信号,低电平有效,1bit
- .pix_x (pix_x ), //输入VGA有效显示区域像素点X轴坐标,10bit
- .pix_y (pix_y ), //输入VGA有效显示区域像素点Y轴坐标,10bit
+ .vga_clk (vga_clk ), //VGA working clock, 25MHz
+ .sys_rst_n (rst_n ), //Reset signal. Low level is effective
+ .pix_x (pix_x ), //x coordinate of current pixel
+ .pix_y (pix_y ), //y coordinate of current pixel
 
- .pix_data (pix_data ) //输出像素点色彩信息,16bit
+ .pix_data (pix_data ) //color information
 
  );
 
