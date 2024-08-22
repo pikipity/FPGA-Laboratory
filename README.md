@@ -21,5 +21,7 @@ In this course, the example experiments include
 + Lab 5:
   + 5-1. RAM IP Core
   + 5-2. Key Debounce
+  + 5-3. ROM IP Core
+  + 5-4. VGA with ROM
 
 Note: Codes that students are required to implement by themselves are not included in this repository.
