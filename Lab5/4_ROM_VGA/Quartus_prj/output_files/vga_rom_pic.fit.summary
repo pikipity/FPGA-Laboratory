@@ -1,0 +1,16 @@
+Fitter Status : Successful - Thu Aug 22 13:34:50 2024
+Quartus Prime Version : 23.1std.1 Build 993 05/14/2024 SC Lite Edition
+Revision Name : vga_rom_pic
+Top-level Entity Name : vga_rom_pic
+Family : Cyclone IV E
+Device : EP4CE10F17C8
+Timing Models : Final
+Total logic elements : 178 / 10,320 ( 2 % )
+    Total combinational functions : 178 / 10,320 ( 2 % )
+    Dedicated logic registers : 45 / 10,320 ( < 1 % )
+Total registers : 45
+Total pins : 20 / 180 ( 11 % )
+Total virtual pins : 0
+Total memory bits : 262,144 / 423,936 ( 62 % )
+Embedded Multiplier 9-bit elements : 0 / 46 ( 0 % )
+Total PLLs : 1 / 2 ( 50 % )
