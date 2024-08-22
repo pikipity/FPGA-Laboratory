@@ -16,7 +16,7 @@ b = uint32(reshape(blue', 1 ,height*width));
 % Init store data
 rgb=zeros(1,height*width);
 
-% Convert image data to RGB565
+% Convert image data from RGB888 to RGB565
 for i = 1:height*width
     rgb(i) = bitshift(bitshift(r(i),-3),11)...
              + bitshift(bitshift(g(i),-2),5)...
