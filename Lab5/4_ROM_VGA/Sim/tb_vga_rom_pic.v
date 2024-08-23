@@ -26,7 +26,7 @@ module tb_vga_rom_pic();
 	 sys_rst_n <= 1'b1;
  end
 
- //sys_clk:产生时钟
+ //Generate system clock 50MHz
  always #10 sys_clk = ~sys_clk ;
  
  //------------------------------------------------------------
