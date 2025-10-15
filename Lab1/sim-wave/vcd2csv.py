@@ -1,21 +1,22 @@
 import csv
 from vcdvcd import VCDVCD
+import argparse
 
 def vcd_to_csv(vcd_filename, csv_filename):
     """
-    将 VCD 文件转换为 CSV 格式
+    Convert VCD to CSV 
     
-    参数:
-        vcd_filename: 输入的 VCD 文件路径
-        csv_filename: 输出的 CSV 文件路径
+    Parameters:
+        vcd_filename: Input path of vcd file
+        csv_filename: Output path of csv file
     """
-    # 读取 VCD 文件
+    # Read VCD
     vcd = VCDVCD(vcd_filename)
     
-    # 获取所有信号标识符
+    # Get signal labels
     signals = vcd.signals
     
-    # 获取所有时间点并排序
+    # Get all time points
     all_times = set()
     for signal_id in signals:
         signal = vcd[signal_id]
@@ -24,24 +25,24 @@ def vcd_to_csv(vcd_filename, csv_filename):
     
     sorted_times = sorted(all_times)
     
-    # 写入 CSV 文件
+    # Write to csv file
     with open(csv_filename, 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
         
-        # 写入表头
+        # table head
         header = ['Time']
         for signal_id in signals:
             signal = vcd[signal_id]
             header.append(f"{signal_id}")
         writer.writerow(header)
         
-        # 写入数据行
+        # data row
         for timestamp in sorted_times:
             row = [timestamp]
             
             for signal_id in signals:
                 signal = vcd[signal_id]
-                # 查找当前时间点的信号值
+                # based on time, find the data
                 current_value = None
                 for time_val in signal.tv:
                     if time_val[0] <= timestamp:
@@ -49,11 +50,21 @@ def vcd_to_csv(vcd_filename, csv_filename):
                     else:
                         break
                 
-                row.append(current_value or 'x')  # 'x' 表示未知值
+                row.append(current_value or 'x')  # 'x' denotes unknow
             
             writer.writerow(row)
 
-# 使用示例
+
 if __name__ == "__main__":
-    vcd_to_csv('signals_tb_led.vcd', 'output.csv')
-    print("VCD 文件已成功转换为 CSV 格式")
+    parser = argparse.ArgumentParser(
+        description="Convert VCD to CSV"
+    )
+    parser.add_argument("-i", "--input", required=True, type=str, help="Path of vcd file")
+    parser.add_argument("-o", "--output", required=True, type=str, help="Path of csv file")
+    args = parser.parse_args()
+
+    vcd_path = args.input
+    csv_path = args.output
+
+    vcd_to_csv(vcd_path, csv_path)
+    print("Successful")

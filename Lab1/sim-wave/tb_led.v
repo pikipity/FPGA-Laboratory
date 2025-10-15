@@ -7,15 +7,16 @@ reg artificial_key_in;
 // Declare output record signal
 wire record_led_out;
 
-// Define stop time
-initial begin
-    #10000 $finish;
-end
-
 // Define waveform record file
 initial begin
     $dumpfile("signals_tb_led.vcd");
     $dumpvars(0, tb_led);
+end
+
+// Define stop time
+initial begin
+    #10000
+    $finish;
 end
 
 // Generate artificial inputs
