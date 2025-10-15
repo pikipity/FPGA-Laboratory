@@ -1,3 +1,7 @@
 *.bak
 *.xcf
 Lab1/sim-developmentboard/obj_dir
+Lab2/sim-developmentboard/obj_dir
+Lab3/sim-developmentboard/obj_dir
+Lab4/sim-developmentboard/obj_dir
+Lab5/sim-developmentboard/obj_dir
