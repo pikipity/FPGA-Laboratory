@@ -8,6 +8,12 @@
 
 using namespace std;
 
+void wait_10ns() {
+    for (volatile int i = 0; i < 100; ++i) {
+        // Adjust loop count based on calibration
+    }
+}
+
 VDevelopmentBoard* display;              // instantiation of the model
 
 uint64_t main_time = 0;         // current simulation time
@@ -148,7 +154,7 @@ void glutTimer(int t) {
 
 // handle up/down/left/right arrow keys
 std::atomic<int> keys[5] = {1, 1, 1, 1, 1};
-int key_prev_state[5] = {1, 1, 1, 1, 1};
+// int key_prev_state[5] = {1, 1, 1, 1, 1};
 void keyPressed(unsigned char key, int x, int y) {
     switch(key) {
         case 'a':
@@ -197,15 +203,12 @@ void graphics_loop(int argc, char** argv) {
     glutInitWindowPosition(100, 100);
     glutCreateWindow("VGA and LED Simulator");
     glutDisplayFunc(render);
+    glutSetKeyRepeat(GLUT_KEY_REPEAT_OFF);
     glutKeyboardFunc(keyPressed);
     glutKeyboardUpFunc(keyReleased);
     
     gl_setup_complete = true;
 
-    
-    
-    
-    
     // re-render every 16ms, around 60Hz
     glutTimerFunc(16, glutTimer, 16);
     glutMainLoop();
@@ -220,31 +223,85 @@ bool pre_v_sync = 0;
 
 
 // we only want the input to last for one or few clocks
-void discard_input() {
-    display->reset = 1;
-    display->B2 = 1;
-    display->B3 = 1;
-    display->B4 = 1;
-	 display->B5 = 1;
+// void discard_input() {
+//     display->reset = 1;
+//     display->B2 = 1;
+//     display->B3 = 1;
+//     display->B4 = 1;
+// 	 display->B5 = 1;
+// }
+
+// set Verilog module inputs based on arrow key inputs
+void apply_input() {
+	
+    // for (int i = 0; i < 5; i++) {
+    //     // 检测下降沿（按键按下）
+    //     if (key_prev_state[i] == 1 && keys[i] == 0) {
+    //         // 下降沿，触发按键按下
+    //         switch (i) {
+    //             case 0: display->reset = 0; break;
+    //             case 1: display->B2 = 0; break;
+    //             case 2: display->B3 = 0; break;
+    //             case 3: display->B4 = 0; break;
+    //             case 4: display->B5 = 0; break;
+    //         }
+    //     }
+    //     // 检测上升沿（按键释放）
+    //     else if (key_prev_state[i] == 0 && keys[i] == 1) {
+    //         // 上升沿，触发按键释放
+    //         switch (i) {
+    //             case 0: display->reset = 1; break;
+    //             case 1: display->B2 = 1; break;
+    //             case 2: display->B3 = 1; break;
+    //             case 3: display->B4 = 1; break;
+    //             case 4: display->B5 = 1; break;
+    //         }
+    //     }
+    // }
+    // for (int i = 0; i < 5; i++) {
+    //     // 更新前一个状态
+    //     key_prev_state[i] = keys[i];
+    // }
+    display->reset = keys[0];
+    display->B2 = keys[1];
+    display->B3 = keys[2];
+    display->B4 = keys[3];
+    display->B5 = keys[4];
 }
 
+void update_leds(){
+    // 更新LED状态
+    leds_state[0] = display->led1;
+    leds_state[1] = display->led2;
+    leds_state[2] = display->led3;
+    leds_state[3] = display->led4;
+    leds_state[4] = display->led5;
+}
+
+void display_eval(){
+    apply_input();
+    display->eval();
+    update_leds();
+}
 
 
 // simulate for a single clock
 void tick() {
-    // 上升沿
-    display->clk = 0;
-    display->eval();
+    // // 上升沿
+    // display->clk = 0;
+    // display_eval();
     
     // 等待一小段时间模拟时钟上升
+    wait_10ns();
     main_time++;
     display->clk = 1;
-    display->eval();
+    display_eval();
     
     // 下降沿
+    wait_10ns();
     main_time++;
     display->clk = 0;
-    display->eval();
+    display_eval();
 }
 
 // globally reset the model
@@ -280,7 +337,7 @@ void reset() {
 	// 重置按键状态
     for (int i = 0; i < 5; i++) {
         keys[i] = 1;
-        key_prev_state[i] = 1;
+        // key_prev_state[i] = 1;
     }
 	 
 	 // 清除重启标志
@@ -289,47 +346,16 @@ void reset() {
 	 
 }
 
-// set Verilog module inputs based on arrow key inputs
-void apply_input() {
-	
-    for (int i = 0; i < 5; i++) {
-        // 检测下降沿（按键按下）
-        if (key_prev_state[i] == 1 && keys[i] == 0) {
-            // 下降沿，触发按键按下
-            switch (i) {
-                case 0: display->reset = 0; break;
-                case 1: display->B2 = 0; break;
-                case 2: display->B3 = 0; break;
-                case 3: display->B4 = 0; break;
-                case 4: display->B5 = 0; break;
-            }
-        }
-        // 检测上升沿（按键释放）
-        else if (key_prev_state[i] == 0 && keys[i] == 1) {
-            // 上升沿，触发按键释放
-            switch (i) {
-                case 0: display->reset = 1; break;
-                case 1: display->B2 = 1; break;
-                case 2: display->B3 = 1; break;
-                case 3: display->B4 = 1; break;
-                case 4: display->B5 = 1; break;
-            }
-        }
-        // 更新前一个状态
-        key_prev_state[i] = keys[i];
-    }
-	 
-}
+
 
 // read VGA outputs and update graphics buffer
 void sample_pixel() {
     //discard_input();
 	
-//	static int debug_count = 0;
+// 	static int debug_count = 0;
 //    if (debug_count % 1000 == 0) {
-//        cout << ", Coord X: " << coord_x
-//             << ", Coord Y: " << coord_y
-//             << ", RGB: " << display->rgb << endl;
+//         cout << "key 1 " << keys[1] << endl;
+//        cout << "key 1: " << keys[1] << endl;
 //    }
 //    debug_count++;
     
@@ -344,6 +370,8 @@ void sample_pixel() {
     if(display->v_sync && !pre_v_sync){ // on positive edge of v_sync (active high)
         // re-sync vertical counter: reset to 0
         coord_y = 0;
+
+        
     }
 
     if(coord_x >= H_ACTIVE_START && coord_x < H_ACTIVE_START + ACTIVE_WIDTH && 
@@ -358,16 +386,9 @@ void sample_pixel() {
 
     pre_h_sync = display->h_sync;
     pre_v_sync = display->v_sync;
-
-    // 更新LED状态
-    leds_state[0] = display->led1;
-    leds_state[1] = display->led2;
-    leds_state[2] = display->led3;
-    leds_state[3] = display->led4;
-    leds_state[4] = display->led5;
-
-    apply_input(); // inputs are pulsed once each new frame
 }
+
+
 
 int main(int argc, char** argv) {
     // create a new thread for graphics handling
@@ -388,9 +409,13 @@ int main(int argc, char** argv) {
 		 if (restart_triggered) {
         reset();
     }
-		 
+		
         tick();
+        // update_leds();
+        // apply_input(); // inputs are pulsed once each new frame
         tick();
+        // update_leds();
+        // apply_input(); // inputs are pulsed once each new frame
         // the clock frequency of VGA is half of that of the whole model
         // so we sample from VGA every other clock
         sample_pixel();
