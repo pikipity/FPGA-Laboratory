@@ -1,0 +1,135 @@
+$date
+	Wed Oct 15 12:07:04 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_asyn_flip_flop $end
+$var wire 1 ! record_led_out $end
+$var reg 1 " artificial_clk $end
+$var reg 1 # artificial_key_in $end
+$var reg 1 $ artificial_rst $end
+$scope module asyn_flip_flop_inst $end
+$var wire 1 # key_in $end
+$var wire 1 " sys_clk $end
+$var wire 1 $ sys_rst_n $end
+$var reg 1 ! led_out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0$
+1#
+1"
+0!
+$end
+#10000
+0"
+#20000
+1$
+1"
+#30000
+0"
+#40000
+1!
+1"
+#50000
+0"
+#60000
+1"
+#70000
+0"
+#80000
+1"
+#90000
+0"
+#100000
+1"
+#110000
+0"
+#120000
+1"
+#130000
+0"
+#140000
+1"
+#150000
+0"
+#160000
+1"
+#170000
+0"
+#180000
+1"
+#190000
+0"
+#200000
+1"
+#210000
+0"
+#220000
+1"
+#230000
+0!
+0$
+0"
+#240000
+1"
+#250000
+0"
+#260000
+1"
+#270000
+1$
+0"
+#280000
+1!
+1"
+#290000
+0"
+#300000
+1"
+#310000
+0"
+#320000
+1"
+#330000
+0"
+#340000
+1"
+#350000
+0"
+#360000
+1"
+#370000
+0"
+#380000
+1"
+#390000
+0"
+#400000
+1"
+#410000
+0"
+#420000
+1"
+#430000
+0"
+#440000
+1"
+#450000
+0"
+#460000
+1"
+#470000
+0"
+#480000
+1"
+#490000
+0"
+#500000
+1"
