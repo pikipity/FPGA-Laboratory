@@ -1,0 +1,30 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Tue Oct 21 11:05:19 2025
+[*]
+[dumpfile] "/mnt/d/Github/FPGA-Laboratory/Lab5_Buttons/sim-wave/signals_tb_vga_pic_move_ball_click_debounce.vcd"
+[dumpfile_mtime] "Tue Oct 21 11:02:39 2025"
+[dumpfile_size] 1140755965
+[savefile] "/mnt/d/Github/FPGA-Laboratory/Lab5_Buttons/sim-wave/tb_vga_pic_move_ball_click_debounce_demo.gtkw"
+[timestart] 0
+[size] 1016 639
+[pos] 399 160
+*-37.523998 400000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_vga_pic_move_ball_click_debounce.
+[sst_width] 276
+[signals_width] 206
+[sst_expanded] 1
+[sst_vpaned_height] 171
+@28
+tb_vga_pic_move_ball_click_debounce.vga_pic_inst.vga_clk
+tb_vga_pic_move_ball_click_debounce.vga_pic_inst.sys_rst_n
+@22
+tb_vga_pic_move_ball_click_debounce.vga_pic_inst.cnt_press_20ms[0:19]
+tb_vga_pic_move_ball_click_debounce.vga_pic_inst.cnt_release_20ms[0:19]
+@28
+tb_vga_pic_move_ball_click_debounce.vga_pic_inst.up
+tb_vga_pic_move_ball_click_debounce.vga_pic_inst.key_up_flag
+@29
+tb_vga_pic_move_ball_click_debounce.vga_pic_inst.up_falling_edge
+[pattern_trace] 1
+[pattern_trace] 0

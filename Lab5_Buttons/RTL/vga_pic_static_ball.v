@@ -34,7 +34,9 @@ parameter BACKGROUND_COLOR = PURPPLE; // background color
 
 // generate color
 always @(*) begin
-    if ((pix_x - ball_x) * (pix_x - ball_x) + (pix_y - ball_y) * (pix_y - ball_y) <= BALL_RADIUS * BALL_RADIUS) begin
+    if ((pix_x - ball_x) * (pix_x - ball_x) + 
+            (pix_y - ball_y) * (pix_y - ball_y) 
+                 <= BALL_RADIUS * BALL_RADIUS) begin
         pix_data = BALL_COLOR; 
     end else begin
         pix_data = BACKGROUND_COLOR; 

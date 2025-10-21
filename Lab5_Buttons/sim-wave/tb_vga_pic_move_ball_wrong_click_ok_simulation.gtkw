@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Tue Oct 21 11:25:06 2025
+[*]
+[dumpfile] "/mnt/d/Github/FPGA-Laboratory/Lab5_Buttons/sim-wave/signals_tb_vga_pic_move_ball_wrong_click_ok_simulation.vcd"
+[dumpfile_mtime] "Tue Oct 21 11:22:39 2025"
+[dumpfile_size] 921718648
+[savefile] "/mnt/d/Github/FPGA-Laboratory/Lab5_Buttons/sim-wave/tb_vga_pic_move_ball_wrong_click_ok_simulation.gtkw"
+[timestart] 0
+[size] 1016 639
+[pos] 92 45
+*-36.292675 30000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_vga_pic_move_ball_wrong_click_ok_simulation.
+[sst_width] 276
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 171
+@28
+tb_vga_pic_move_ball_wrong_click_ok_simulation.vga_pic_inst.vga_clk
+tb_vga_pic_move_ball_wrong_click_ok_simulation.vga_pic_inst.sys_rst_n
+@29
+tb_vga_pic_move_ball_wrong_click_ok_simulation.vga_pic_inst.up
+@24
+tb_vga_pic_move_ball_wrong_click_ok_simulation.vga_pic_inst.ball_y[9:0]
+[pattern_trace] 1
+[pattern_trace] 0
