@@ -92,7 +92,35 @@ output wire [15:0] rgb, //RGB565 color data
 //  );
 
    //------------- vga_pic_inst -------------
- vga_pic_move_ball_press vga_pic_inst
+//  vga_pic_move_ball_press vga_pic_inst
+//  (
+//  .vga_clk (vga_clk ), //VGA working clock, 25MHz
+//  .sys_rst_n (sys_rst_n ), //Reset signal. Low level is effective
+//  .pix_x (pix_x ), //x coordinate of current pixel
+//  .pix_y (pix_y ), //y coordinate of current pixel
+ 
+//  .up(up),
+
+//  .pix_data (pix_data ) //color information
+
+//  );
+
+    //------------- vga_pic_inst -------------
+//  vga_pic_move_ball_click_debounce vga_pic_inst
+//  (
+//  .vga_clk (vga_clk ), //VGA working clock, 25MHz
+//  .sys_rst_n (sys_rst_n ), //Reset signal. Low level is effective
+//  .pix_x (pix_x ), //x coordinate of current pixel
+//  .pix_y (pix_y ), //y coordinate of current pixel
+ 
+//  .up(up),
+
+//  .pix_data (pix_data ) //color information
+
+//  );
+
+     //------------- vga_pic_inst -------------
+ vga_pic_move_ball_press_debounce vga_pic_inst
  (
  .vga_clk (vga_clk ), //VGA working clock, 25MHz
  .sys_rst_n (sys_rst_n ), //Reset signal. Low level is effective

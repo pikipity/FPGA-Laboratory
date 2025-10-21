@@ -1,0 +1,26 @@
+[*]
+[*] GTKWave Analyzer v3.3.116 (w)1999-2023 BSI
+[*] Tue Oct 21 11:29:43 2025
+[*]
+[dumpfile] "/mnt/d/Github/FPGA-Laboratory/Lab5_Buttons/sim-wave/signals_tb_vga_pic_move_ball_click_ok_simulation.vcd"
+[dumpfile_mtime] "Tue Oct 21 11:28:25 2025"
+[dumpfile_size] 921718075
+[savefile] "/mnt/d/Github/FPGA-Laboratory/Lab5_Buttons/sim-wave/tb_vga_pic_move_ball_click_ok_simulation.gtkw"
+[timestart] 0
+[size] 1016 639
+[pos] -27 34
+*-37.372566 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tb_vga_pic_move_ball_click_ok_simulation.
+[sst_width] 276
+[signals_width] 150
+[sst_expanded] 1
+[sst_vpaned_height] 171
+@28
+tb_vga_pic_move_ball_click_ok_simulation.vga_pic_inst.vga_clk
+tb_vga_pic_move_ball_click_ok_simulation.vga_pic_inst.sys_rst_n
+tb_vga_pic_move_ball_click_ok_simulation.vga_pic_inst.up
+tb_vga_pic_move_ball_click_ok_simulation.vga_pic_inst.up_falling_edge
+@25
+tb_vga_pic_move_ball_click_ok_simulation.vga_pic_inst.ball_y[9:0]
+[pattern_trace] 1
+[pattern_trace] 0
