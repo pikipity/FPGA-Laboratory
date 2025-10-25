@@ -26,9 +26,9 @@ Besides these coding, simulation and analysis tools, you may also need
 
 All above tools can be easily installed or accessed in Linux system. Our lab courses will be based on the Linux system.
 
-If you use Windows or Mac, you can use ["VirtualBox"](https://www.virtualbox.org/wiki/Downloads) and install ["Ubuntu"](https://ubuntu.com/) in a virtual environment. I recommand using [``Ubuntu 20.04 LTS (Focal Fossa)`` version](https://releases.ubuntu.com/20.04.6/?_ga=2.149898549.2084151835.1707729318-1126754318.1683186906&_gl=1*1qp18bb*_gcl_au*MTE3MTkxMjQzOC4xNzU5OTA0MjQz). If you use the VirtualBox, make sure that you install the ``"VirtualBox Guest Additions"`` and **Set up the shared folder**. Otherwise, you cannot access your files outside your virtual environment. You may refer the following videos and documents to install and set up "VirtualBox" and "Ubuntu".
+If you use Windows or Mac, you can use ["VirtualBox"](https://www.virtualbox.org/wiki/Downloads) and install ["Ubuntu"](https://ubuntu.com/) in a virtual environment. I recommand using [``Ubuntu 22.04 LTS`` version](https://releases.ubuntu.com/jammy/). If you use the VirtualBox, make sure that you install the ``"VirtualBox Guest Additions"`` and **Set up the shared folder**. Otherwise, you cannot access your files outside your virtual environment. You may refer the following videos and documents to install and set up "VirtualBox" and "Ubuntu".
 
-+ [How to Install Ubuntu 20.04 LTS on VirtualBox in Windows](https://www.youtube.com/watch?v=x5MhydijWmc)
++ [How to Install Ubuntu on VirtualBox in Windows](https://www.youtube.com/watch?v=x5MhydijWmc)
 + [How to Install VirtualBox Guest Additions on Ubuntu](https://www.linuxtechi.com/install-virtualbox-guest-additions-on-ubuntu/)
 + [How to set up the shared folders in VirtualBox](https://docs.oracle.com/en/virtualization/virtualbox/6.0/user/sharedfolders.html)
 
