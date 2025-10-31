@@ -9,7 +9,7 @@ input wire up,
 
 output wire hsync , //Line sync signal
 output wire vsync , //Field sync signal
-output wire [15:0] rgb, //RGB565 color data
+output wire [15:0] rgb //RGB565 color data
 );
 
  ////
