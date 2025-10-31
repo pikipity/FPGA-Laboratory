@@ -12,7 +12,7 @@ In this course, the example experiments include
   + This lab shows how to implement the VGA driver and display static frame in the VGA screen. 
 + Lab 4: Finite State Machine
   + This lab introduces the state machine, and uses the vending machine as the example to show how to implement the mealy and moore types of the state machine.
-+ Lab 2: Buttons
++ Lab 5: Buttons
   + This lab introduces several different implementations of handle the mechanical buttons including correct and wrong implementations, and mainly shows how to eliminate the effects of button bounce.
 
 Note: Codes that students are required to implement by themselves are not included in this repository.
